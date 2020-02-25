@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>First Model</title>
+<meta charset = "utf-8">
+<link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+<body>
+<div class = "login">
+<form action="{{ url_for('predict')}}"method="post">
+  Age(0-100):<br>
+  <input type="text" name="age"><br>
+  Sex (0: M/1 :F):<br>
+  <input type="text" name="sex"><br>
+  cp (0,1,2,3):<br>
+  <input type="text" name="cp"><br>
+  trestbps (100-150):<br>
+  <input type="text" name="trestbps"><br>
+  chol (150-300):<br>
+  <input type="text" name="chol"><br>
+  fbs (0/1):<br>
+  <input type="text" name="fbs"><br>
+  restecg (0/1):<br>
+  <input type="text" name="restecg"><br>
+  thalach (150-200):<br>
+  <input type="text" name="thalach"><br>
+  exang (0/1):<br>
+  <input type="text" name="exang"><br>
+  oldpeak (0-4.0):<br>
+  <input type="text" name="oldpeak"><br>
+  slope (0/1/2):<br>
+  <input type="text" name="slope"><br>
+  ca (0/1/2):<br>
+  <input type="text" name="ca"><br>
+  thal (1/2/3):<br>
+  <input type="text" name="thal"><br>
+<br>
+<br>
+
+<button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+</form>
+<br>
+<br>
+<br>
+<br>
+<form action="{{ url_for('predict_api')}}"method="post">
+<button type="submit" class="btn btn-primary btn-block btn-large">Predict_api</button>
+</form>
+<br>
+{{ prediction_text }}
+</div>
+
+</body>
+</html>
