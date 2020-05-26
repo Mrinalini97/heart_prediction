@@ -16,7 +16,7 @@ import pickle
 
 heart_data = pd.read_csv('heart.csv')
 
-
+# EDA commented, uncomment to run
 # In[18]:
 
 
