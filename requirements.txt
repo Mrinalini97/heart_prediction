@@ -1,5 +1,5 @@
 scikit_learn==0.21.3
-numpy==1.16.2
+numpy==1.22.0
 pandas==0.24.1
 Flask_Cors==3.0.7
 Flask==1.0.2
